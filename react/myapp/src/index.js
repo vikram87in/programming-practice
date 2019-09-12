@@ -7,10 +7,13 @@ class App extends Component {
         return (
             <div className="App">
                 <h1>Hello, React!</h1>
+                <h2>It is {new Date().toLocaleTimeString()}.</h2>
                 <button>hi</button>
             </div>
         )
     }
 }
+setInterval(() => {
+    ReactDOM.render(<App />, document.getElementById('root'));
+}, 1000);
 
-ReactDOM.render(<App />, document.getElementById('root'));
