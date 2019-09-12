@@ -2,8 +2,8 @@
 This repository has been made to practice programming code in various languages. This also states the current status for everything languages
 
 React: 
-* React Full Stack: React basics ---> watched "Using create react app"
-* Getting Started with React(tania rascia) ---> reached "React Developer Tools" section
+* Wes Bos: React for beginners
+* ReactJS.org: Components and Props
 
 
 ES6:
@@ -12,6 +12,7 @@ ES6:
 
 Javascript:
 * Javascript 30: 1st lesson
+* You don't know JS
 
 
 HTML/CSS: 
