@@ -2,64 +2,69 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Clock extends Component {
+function LoginButton(props) {
+    return (
+        <button onClick={props.onClick}>
+            Login
+      </button>
+    );
+}
+
+function LogoutButton(props) {
+    return (
+        <button onClick={props.onClick}>
+            Logout
+      </button>
+    );
+}
+
+function Greeting(props) {
+    const isLoggedIn = props.isLoggedIn;
+    if (isLoggedIn) {
+      return <UserGreeting />;
+    }
+    return <GuestGreeting />;
+  }
+  function UserGreeting(props) {
+    return <h1>Welcome back!</h1>;
+  }
+  
+  function GuestGreeting(props) {
+    return <h1>Please sign up.</h1>;
+  }
+ class LoginControl extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            date: new Date(),
-            counter: 0
-        }
+        this.handleLoginClick = this.handleLoginClick.bind(this);
+        this.handleLogoutClick = this.handleLogoutClick.bind(this);
+        this.state = { isLoggedIn: false };
     }
 
-    componentDidMount() {
-        // setInterval(() => {
-        //     this.tick();
-        // }, 1000);
+    handleLogoutClick = () => {
+        this.setState({ isLoggedIn: false });
     }
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     return false;
-    // }
-
-    onButtonClick = (one,two) => {
-        debugger;
-        this.setState((state, props) => {
-            return { counter: state.counter + 1 }
-        });
-        this.setState((state, props) => {
-            return { counter: state.counter + 1 }
-        });
-        // this.setState((state,props)=>{
-        //     return {counter: state.counter+1}
-        // });
-        // this.setState({counter: this.state.counter+1});
-        // this.setState({counter: this.state.counter+1});
-        // this.setState({counter: this.state.counter+1});
-
-        // this.setState((prevState) => ({ counter: prevState.counter + 1 }))
-        // this.setState((prevState) => ({ counter: prevState.counter + 1 }))
-        // this.setState((prevState) => ({ counter: prevState.counter + 1 }))
+    handleLoginClick = () => {
+        this.setState({ isLoggedIn: true });
     }
-
-
-    tick() {
-        this.setState({ date: new Date() });
-    }
-
     render() {
-        let number = 100;
+        const isLoggedIn = this.state.isLoggedIn;
+        let button;
+
+        if (isLoggedIn) {
+            button = <LogoutButton onClick={this.handleLogoutClick} />;
+        } else {
+            button = <LoginButton onClick={this.handleLoginClick} />;
+        }
         return (
             <div>
-                <h1>Hello, world! The counter is {this.state.counter}</h1>
-                <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-                <button onClick={this.onButtonClick.bind(this)}>+3</button>
-                <button onClick={this.onButtonClick.bind(this)}>+3</button>
-            </div >
+                <Greeting isLoggedIn={isLoggedIn} />
+                {button}
+            </div>
         );
     }
 }
 
 ReactDOM.render(
-    <Clock />,
+    <LoginControl />,
     document.getElementById('root')
 );
-
