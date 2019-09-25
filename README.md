@@ -3,7 +3,7 @@ This repository has been made to practice programming code in various languages.
 
 React: 
 * Wes Bos: React for beginners
-* ReactJS.org: Components and Props
+* ReactJS.org: Lists and Keys
 
 
 ES6:
