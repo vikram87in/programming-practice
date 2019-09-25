@@ -1,0 +1,26 @@
+How to export installed extensions in another machine on windows:
+
+On machine A, inside the vs code command terminal, run the following command to list all the installed extension:
+
+code --list-extensions | % { "code --install-extension $_" }
+
+------------------------------------------------------------------------------------------------------------------
+
+Then copy paste the echo output in machine B in order to install the extensions
+
+------------------------------------------------------------------------------------------------------------------
+
+Recommended extensions:
+
+code --install-extension albert.TabOut
+code --install-extension alefragnani.Bookmarks
+code --install-extension joshpeng.sublime-babel-vscode
+code --install-extension joshpeng.theme-charcoal-oceanicnext
+code --install-extension mhartington.oceanic-next
+code --install-extension ms-vscode.vs-keybindings
+code --install-extension msjsdiag.debugger-for-chrome
+code --install-extension steoates.autoimport
+code --install-extension Sword.vscode-surround
+code --install-extension vscode-icons-team.vscode-icons
+code --install-extension xabikos.JavaScriptSnippets
+code --install-extension xabikos.ReactSnippets
