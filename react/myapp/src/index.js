@@ -4,6 +4,8 @@ import './index.css';
 import Login from './Login';
 import Reservation from './Reservation';
 import Calculator from './TemperatureCalculator';
+import ChildRefDemo from './ChildRefDemo';
+import ErrorBoundary, { ErrorBoundaryApp } from './ErrorBoundary';
 
 class App extends Component {
     constructor(props) {
@@ -13,9 +15,9 @@ class App extends Component {
     }
     render() {
         return (
-            <React.Fragment>
-                <Calculator />
-            </React.Fragment>
+            <ErrorBoundary>
+                <ErrorBoundaryApp />
+            </ErrorBoundary>
         );
     }
 }
