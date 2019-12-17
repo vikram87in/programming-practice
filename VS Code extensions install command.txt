@@ -24,3 +24,6 @@ code --install-extension Sword.vscode-surround
 code --install-extension vscode-icons-team.vscode-icons
 code --install-extension xabikos.JavaScriptSnippets
 code --install-extension xabikos.ReactSnippets
+
+also install:
+GitLens
