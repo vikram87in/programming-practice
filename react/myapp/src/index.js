@@ -5,7 +5,10 @@ import Login from './Login';
 import Reservation from './Reservation';
 import Calculator from './TemperatureCalculator';
 import ChildRefDemo from './ChildRefDemo';
-import ErrorBoundary, { ErrorBoundaryApp } from './ErrorBoundary';
+import RefDemo1 from './RefDemo1';
+import CallBackRefDemo from './CallBackRefDemo';
+import ErrorBoundaryApp from './ErrorBoundary';
+import GetDerivedStateFromPropsDemo from './GetDerivedStateFromPropsDemo';
 
 class App extends Component {
     constructor(props) {
@@ -15,9 +18,7 @@ class App extends Component {
     }
     render() {
         return (
-            <ErrorBoundary>
-                <ErrorBoundaryApp />
-            </ErrorBoundary>
+           <GetDerivedStateFromPropsDemo/>
         );
     }
 }
