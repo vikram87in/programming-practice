@@ -8,6 +8,12 @@ export default class CustomTextInput extends React.Component {
         this.textboxRef2 = null;
     }
 
+
+    setRef = (element) => {
+        debugger;
+        this.textboxRef2 = element;
+    }
+
     focusTextInput = () => {
         //TODO:
         this.textboxRef.focus();
@@ -17,13 +23,6 @@ export default class CustomTextInput extends React.Component {
         //TODO:
         this.textboxRef2.focus();
     }
-
-    setRef = (element) => {
-        debugger;
-        this.textboxRef2 = element;
-    }
-
-    componentWillUnmount
 
     render() {
         return (

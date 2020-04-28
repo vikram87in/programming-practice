@@ -4,12 +4,6 @@ import React, { Component } from 'react';
 
 
 class GetDerivedStateFromPropsDemo extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: 1
-        }
-    }
     static changeState = () => { //can use this to call other static functions
         console.log(this);
         this.changeState1();
@@ -23,6 +17,12 @@ class GetDerivedStateFromPropsDemo extends Component {
         //can't use this here
     console.log('GetDerived life cycle method called');
         GetDerivedStateFromPropsDemo.changeState();
+    }
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: 1
+        }
     }
     onClick=()=>{
         this.setState({value:2});

@@ -37,13 +37,13 @@ export default class Calculator extends React.Component {
     }
   }
 
-  onFahrenheitChange = (value) => {
-    this.setState({ temperature: value, tempType: 'f' });
-  }
-
   onCelciusChange = (value) => {
     debugger;
     this.setState({ temperature: value, tempType: 'c' });
+  }
+
+  onFahrenheitChange = (value) => {
+    this.setState({ temperature: value, tempType: 'f' });
   }
 
   
