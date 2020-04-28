@@ -6,7 +6,7 @@ export default class ParametersInEventHandlers extends Component {
             console.log('clicked')
         }   
     }
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         console.log('in will mount')
     }
     

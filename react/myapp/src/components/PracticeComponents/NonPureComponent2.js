@@ -9,7 +9,7 @@ constructor(props) {
     }
 }
 
-componentWillReceiveProps(nextProps) {
+UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.name != nextProps.name) {
         this.setState({name: nextProps.name})
     }

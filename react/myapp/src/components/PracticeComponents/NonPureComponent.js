@@ -6,11 +6,11 @@ class NonPureComponent extends Component {
 //     if(this.props.name == nextProps.name) return false;
 //     return true;
 // }
-componentWillReceiveProps(nextProps) {
+UNSAFE_componentWillReceiveProps(nextProps) {
     console.log('in component will recieve props')
 }
 
-componentWillMount() {
+UNSAFE_componentWillMount() {
     console.log('in will mount')
 }
 
