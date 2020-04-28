@@ -1,5 +1,5 @@
 import React from 'react'
-import TemperatureInput from './components/TemperatureInput';
+import TemperatureInput from './TemperatureInput';
 import { thisExpression } from '@babel/types';
 
 function BoilingVerdict(props) {
